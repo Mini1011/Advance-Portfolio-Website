@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(180deg, #111a23, black,); /* Updated gradient background */
+  color: #100909; /* Professional text color */
+  font-family: Arial, sans-serif;
+}
+
+.pages {
+  color: #180e0e; /* Professional color */
+  text-align: center;
+  font-size: 3.5rem;
+  margin-top: 10%;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+a {
+  color: #6b8ba4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

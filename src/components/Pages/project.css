@@ -1,0 +1,277 @@
+.projects {
+  position: relative;
+  background: linear-gradient(180deg, #2D3946, #0a101a);
+  padding: 0;
+  margin: 0;
+  height: 170vh;
+  width: 100%;
+}
+
+.progress h1 {
+  font-size: 40px;
+  display: block;
+}
+@media(max-width: 768px) {
+  .progress h1 {
+    font-size: 24px;
+    display: block;
+  }
+}
+.progress {
+   /* Hide progress bar on small screens */
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding-top: 40px;
+  text-align: center;
+  color: orange;
+  font-size: 36px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .progress {
+    padding-top: 20px;
+    font-size: 24px;
+  }
+
+  .progressBar {
+    display: none; /* Hide the progress bar itself on smaller screens */
+  }
+}
+@media (min-width: 769px) {
+  .progress {
+    display: block; /* Show progress bar on screens wider than 768px */
+    padding-top: 40px;
+    font-size: 36px;
+  }
+
+  .progressBar {
+    height: 10px;
+    background-color: white;
+    transform-origin: left center;
+    transform: scaleX(1); /* Initial state of scaleX */
+    transition: transform 0.3s ease-out; /* Transition for scaleX */
+  }
+
+  .progress.decreasing .progressBar {
+    animation: decreaseProgress 1s ease-in-out forwards;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px; /* Adjust margin as needed */
+  opacity: 0; /* Initial opacity for animation */
+  position: relative;
+  transition: opacity 0.3s ease-in-out; /* Transition for opacity */
+  &:hover {
+    .textContainer {
+      transform: translateY(-10px); /* Example hover animation */
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.imgContainer {
+  margin-top: 1em;
+  display: flex;
+  padding-bottom: 3rem;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+.imgContainer img {
+  max-width: 50%; /* Ensure the image doesn't exceed its container */
+  height: auto;
+  transform: translateX(-68%);
+  object-fit: cover;
+  border-radius: 10px;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transition for hover effect */
+
+  @media (max-width: 768px) {
+    margin-top: 5px;
+    max-width: 100%; /* Adjust max-width for small screens */
+    height: 20%;
+    transform: none;
+  }
+}
+
+
+.textContainer {
+  margin-top: 1em;
+  flex:1;
+  display: flex;
+  padding-bottom: 4rem;
+  flex-direction: column;
+  gap: 20px;
+  transform: translateY(-20%); /* Initial transform for animation */
+  transition: transform 0.3s ease-out; /* Transition for transform */
+
+  @media (max-width: 768px) {
+    transform: translateY(0); /* Reset transform for small screens */
+    gap: 0px;
+  }
+
+  h2 {
+    margin-top: 2em;
+    font-size: 36px;
+    transform: translateX(40%);
+    color: #333;
+    margin-bottom: 1em;
+    transition: color 0.3s ease-in-out; /* Transition for color */
+
+    @media (max-width: 768px) {
+      transform: translateX(0);
+      display: block;
+      font-size: 18px; /* Adjust transform for small screens */
+      gap: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    color: gray;
+    font-size: 25px;
+    transform: translateX(70%); /* Adjust transform */
+    max-width: 600px; /* Adjust max-width as needed */
+    transition: color 0.3s ease-in-out; /* Transition for color */
+
+    @media (max-width: 768px) {
+      transform: translateX(0); /* Reset transform for small screens */
+      display: none;
+    }
+  }
+
+  .textContainer .buttons .button-link {
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+    font-weight: 300;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: 425px) {
+    h1 {
+      font-size: 24px;
+      display: block; /* Smaller heading size for very small screens */
+    }
+  
+    .progress {
+      font-size: 24px;
+    }
+  
+    .imgContainer img {
+      max-width: 100%; /* Ensure the image scales down properly */
+      height: auto;
+      transform: none;
+    }
+  
+    .textContainer h2 {
+      font-size: 24px;
+      transform: none;
+    }
+  
+    .textContainer p {
+      font-size: 18px;
+      display: none;
+      transform: none;
+      display: block; /* Ensure the text is visible on smaller screens */
+    }
+  
+    .textContainer .buttons .button-link {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
+  .textContainer .buttons .button-link:hover {
+    background-color: orange;
+    scale: 1.1;
+    color: black;
+    font-weight: bold;
+  }
+
+  button {
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Adjust spacing */
+    transition: background-color 0.3s ease-in-out; /* Transition for background-color */
+  }
+
+  &:hover {
+    h2,
+    p {
+      color: #ff7f50; /* Example hover effect on text */
+    }
+
+    button {
+      background-color: #ff7f50; /* Example hover effect on button */
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  button {
+    align-self: center; /* Center button on mobile */
+  }
+}
+
+/* Animation for decreasing progress bar */
+@keyframes decreaseProgress {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}

@@ -1,0 +1,163 @@
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #ffffff09;
+  --bg-color-start: #2e3a47;
+  --bg-color-end: #6b8ba4;
+  --button-bg-color: transparent;
+  --button-border-color: #fff;
+  --button-hover-bg-color: #ffffff1a;
+  --text-color: #ffffff;
+  --overlay-text-color: var(--secondary-color);
+  --font-size-large: 88px;
+  --font-size-medium: 50vh;
+  --font-size-small: 24px;
+  --button-padding: 20px;
+  --button-border-radius: 10px;
+  --button-margin-right: 20px;
+  --mobile-font-size-large: 24px;
+  --mobile-font-size-small: 15px;
+  --mobile-gap: 20px;
+  --desktop-gap: 40px;
+}
+
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--bg-color-start), var(--bg-color-end));
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1024px;
+  height: 100%;
+  margin: auto;
+}
+
+.textContainer {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--desktop-gap);
+  position: absolute;
+  z-index: 1;
+}
+
+.textContainer h1 {
+  font-size: var(--font-size-large);
+  color: var(--text-color);
+}
+
+.textContainer .buttons {
+  display: flex;
+}
+
+.textContainer .buttons button {
+  padding: var(--button-padding);
+  border: 1px solid var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-bg-color);
+  color: var(--text-color);
+  margin-right: var(--button-margin-right);
+  cursor: pointer;
+  font-weight: 300;
+  transition: background-color 0.3s ease;
+}
+
+.textContainer .buttons button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+.textContainer img {
+  width: 50px;
+}
+
+.imageContainer {
+  height: 100%;
+  position: absolute;
+  
+  
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  margin-right: 150px;
+}
+
+.imageContainer img {
+  height: 50%;
+  width: auto;
+  transform: translateX(20%);
+  margin-top: 10rem;
+  object-fit: cover;
+}
+
+.slidingTextContainer {
+  position: absolute;
+  font-size: var(--font-size-medium);
+  bottom: -120px;
+  left: 10%; /* Adjusted position to start further left */
+  white-space: nowrap;
+  color: var(--overlay-text-color);
+  width: 50%;
+  font-weight: bold;
+}
+
+.faded-text h2 {
+  position: absolute;
+  user-select: none;
+  font-size: 7em;
+  color: var(--bggray);
+  font-weight: bold;
+  transform: translateX(-200%);
+  transition: all 3s;
+}
+
+.resume-icon {
+  height: 2em;
+  color: #fff;
+  margin-left: 10px;
+  
+}
+
+@media (max-width: 768px) {
+  .textContainer {
+    height: 50%;
+    width: 100%;
+    gap: var(--mobile-gap);
+    align-items: center;
+    text-align: center;
+  }
+
+  .textContainer h1 {
+    font-size: var(--mobile-font-size-large);
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .textContainer h2 {
+    font-size: var(--mobile-font-size-small);
+    letter-spacing: 6px;
+  }
+
+  .imageContainer {
+    top: unset;
+    bottom: 0;
+    transform: translateY(-15%);
+    height: 50%;
+    width: 80%;
+    right:25%;
+    margin-right: 0px;
+  }
+
+  .resume-icon {
+    height: 1em;
+    margin-left: 20rem;
+    margin-bottom: 18rem; /* Reduced height */
+  }
+
+
+
+}

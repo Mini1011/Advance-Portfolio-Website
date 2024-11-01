@@ -1,0 +1,60 @@
+.social-links-container {
+    display: none;
+    @media (min-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 35%;
+      left: 0;
+    }
+  }
+  
+  .social-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social-link-item {
+    display: flex;
+    align-items: center;
+    width: 90px; /* Initial width for icons */
+    height: 2.5rem; /* Adjust height if needed */
+    padding: 0.5rem;
+    margin-left: -3rem; /* Initially hidden on the left */
+    background-color: #4a4a4a; /* Darker background for better visibility */
+    color: white;
+    border-radius: 0.25rem;
+    overflow: hidden; /* Ensure no overflow */
+    position: relative;
+    transition: width 0.3s, margin-left 0.3s;
+  }
+  
+  .social-link-item:hover {
+    width: 90px; /* Expanded width on hover */
+    margin-left: 0; /* Move to original position on hover */
+  }
+  
+  .social-link-item:hover .social-link-text {
+    display: inline; /* Show text on hover */
+  }
+  
+  .social-link-text {
+    display: none; /* Hide text initially */
+    margin-left: 0.5rem; /* Space between icon and text */
+  }
+  
+  .social-link-item a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    font-size: small;
+  }
+  
+  .social-link-item .fa-icon {
+    font-size: 30px; /* Icon size */
+    margin-left: 0; /* Ensure no extra space to the left of the icon */
+  }
+  

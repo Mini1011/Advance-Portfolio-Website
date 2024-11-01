@@ -1,0 +1,102 @@
+.skills {
+  background: linear-gradient(180deg, #0a101a,#2e3a47);
+  color: white;
+  padding: 2rem 0;
+  min-height: 100vh;
+}
+
+.skills-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.skills-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-bottom: 4px solid #ffffff;
+
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.skills-header p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skill-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem;
+}
+
+.skill-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Specific shadow colors */
+.shadow-orange-500 {
+  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.5);
+}
+
+.shadow-blue-500 {
+  box-shadow: 0 4px 10px rgba(0, 0, 255, 0.5);
+}
+
+.shadow-yellow-500 {
+  box-shadow: 0 4px 10px rgba(255, 255, 0, 0.5);
+}
+
+.shadow-blue-600 {
+  box-shadow: 0 4px 10px rgba(0, 0, 139, 0.5);
+}
+
+.shadow-sky-400 {
+  box-shadow: 0 4px 10px rgba(135, 206, 235, 0.5);
+}
+
+.shadow-green-500 {
+  box-shadow: 0 4px 10px rgba(0, 128, 0, 0.5);
+}
+
+.shadow-orange-300 {
+  box-shadow: 0 4px 10px rgba(255, 140, 0, 0.5);
+}
+
+.shadow-gray-400 {
+  box-shadow: 0 4px 10px rgba(128, 128, 128, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
