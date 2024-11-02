@@ -130,7 +130,7 @@ export default function Home() {
             </Link>
           </motion.div>
           <a
-            href="https://drive.google.com/file/d/1cJmpRZgfLAMtn4uLfne6Wpsn-20ZAjR3/view?usp=drivesdk"
+            href="https://drive.google.com/file/d/110wn_9TmPCxn3JGm-kIMrdjJK6uUHj9o/view?usp=drivesdk"
             target="_blank"
             rel="noopener noreferrer"
           >

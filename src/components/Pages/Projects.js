@@ -1,32 +1,34 @@
 import React from 'react';
 import "./project.css";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
-import MINISITE from '../../assets/Screenshot (2).png';
+import DineOn from '../../assets/Screenshot (6).png';
 import Portf from '../../assets/Screenshot (5).png';
 import Portfolio from '../../assets/Screenshot (3).png';
 
 const items = [
   {
     id: 1,
-    title: "E-commerce Website",
-    img: MINISITE, // Use imported image here
-    description:  "A creative and well-structured website with responsive design for seamless browsing on different devices.",
-    demo: "https://github.com/Mini1011/MINISITE",
-  },
-  {
-    id: 2,
-    title: "Portfolio",
-    img: Portfolio, // Use imported image here
-    description: "Personal portfolio highlighting my skills, projects,etc.",
-    demo: "https://github.com/Mini1011/PORTFOLIO1",
-  },
-  {
-    id: 3,
     title: "Advance Portfolio-Website",
     img: Portf, // Use imported image here
     description: "An interactive website build using React with dynamic navigtion and rsponsive user interface.",
     demo: "https://github.com/Mini1011/Advance-Portfolio-Website",
   },
+  {
+    id: 2,
+    title: "FoodDelivery Website",
+    img: DineOn, // Use imported image here
+    description:  "A creative and well-structured website with responsive design for seamless browsing on different devices.",
+    demo: "https://dine-on-akankshas-projects.vercel.app/",
+  },
+ 
+  {
+    id: 3,
+    title: "Portfolio",
+    img: Portfolio, // Use imported image here
+    description: "Personal portfolio highlighting my skills, projects,etc.",
+    demo: "https://github.com/Mini1011/PORTFOLIO1",
+  },
+ 
 ];
 
 function Projects() {
